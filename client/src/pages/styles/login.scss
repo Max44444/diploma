@@ -1,0 +1,93 @@
+#login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .bg-img {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("/../public/img/bg-img.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+
+    h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #444444;
+      text-align: center;
+    }
+
+    .user-box {
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #444444;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #444444;
+        outline: none;
+        background: transparent;
+
+        &:focus {
+          background: transparent;
+
+        }
+      }
+
+      label {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        color: #444444;
+        font-size: 12px;
+        padding: 10px 0;
+        pointer-events: none;
+        transition: .5s;
+      }
+    }
+
+    .submit-btn {
+      width: 100%;
+      color: #444444;
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid #444444;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      box-sizing: border-box;
+      height: 2.2rem;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        transition: 0.3s;
+      }
+    }
+  }
+
+}

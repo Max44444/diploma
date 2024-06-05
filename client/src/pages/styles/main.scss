@@ -1,0 +1,263 @@
+#main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/../public/img/bg-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#header {
+  position: relative;
+  width: 100vw;
+  height: 3.5rem;
+  background-color: deepskyblue;
+  font-size: 2rem;
+  color: white;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    font-size: 2rem;
+    margin: 0 0.4rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .btn-block {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+#create-vac-form {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 3.5rem;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.closed {
+    display: none;
+  }
+
+  .shade {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  .form {
+    background-color: #fff;
+    padding: 2rem;
+    z-index: 9999;
+    border-radius: 1rem;
+    position: relative;
+
+    h2 {
+      color: #444444;
+      font-weight: 400;
+      padding: 0.5rem 0;
+      font-size: 1.5rem;
+    }
+
+    .rdrDefinedRangesWrapper {
+      display: none;
+    }
+
+    .rdrDateDisplayWrapper {
+      border-radius: 0.3rem;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      color: #777;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .Dropdown-root {
+      position: relative;
+      width: 100%;
+      background-color: rgb(239, 242, 247);
+      border-radius: 0.3rem;
+      padding: 0.5rem;
+      
+      .Dropdown-control {
+        background-color: #fff;
+        color: #7d888d;
+        cursor: pointer;
+        height: 2em;
+        width: 100%;
+        border: none;
+        box-shadow: 0 1px 2px 0 rgba(35, 57, 66, 0.21);
+        border-radius: 0.3rem;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        z-index: 1;
+      }
+
+      .Dropdown-menu {
+        position: absolute;
+        width: 100%;
+        padding: 0 0.5rem;
+        left: 0;
+        top: 2.6rem;
+        z-index: 999;
+
+        .Dropdown-option {
+          background-color: #fff;
+          width: 100%;
+          box-shadow: 0 1px 2px 0 rgba(35, 57, 66, 0.21);
+          color: #7d888d;
+          padding: 0.4rem 1rem;
+          cursor: pointer;
+          user-select: none;
+
+          &:last-child {
+            border-radius: 0 0 0.3rem 0.3rem;
+          }
+
+          &:first-child {
+            border-radius: 0.3rem 0.3rem 0 0;
+          }
+        }
+      }
+    }
+
+    .submit-btn {
+      border: none;
+      margin-top: 1.5rem;
+      width: 100%;
+      background-color: rgb(239, 242, 247);
+      border-radius: 0.3rem;
+      color: #444444;
+      padding: 0.4rem 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}
+
+.account-menu {
+  position: absolute;
+  background-color: white;
+  color: #444444;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 17rem;
+  padding: 1rem 1.2rem;
+  margin-top: 0.5rem;
+  right: 1rem;
+  top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 1rem;
+  transition: right 0.5s ease;
+
+  &.closed {
+    right: -20rem;
+  }
+
+  .menu-btn {
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 0.3rem;
+    cursor: pointer;
+
+    .leave {
+      color: #af1e1e;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      margin: 0.3rem;
+      transition: all 0.1s ease-out;
+    }
+  }
+}
+
+#sidebar {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 3.5rem;
+  bottom: 0;
+
+  .shade {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .content {
+    position: absolute;
+    background-color: white;
+    width: 20rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 1.2rem;
+    z-index: 2;
+    left: 0;
+    transition: left 0.5s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .content-tem {
+      color: #444;
+      width: 100%;
+      margin: 0.3rem;
+      padding: 0.8rem 1rem;
+      background-color: white;
+      border-radius: 0.3rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        margin: 0.3rem;
+        transition: all 0.1s ease-out;
+      }
+    }
+  }
+
+  &.closed {
+    width: 0;
+
+    .content {
+      left: -20rem;
+    }
+
+    .shade {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  }
+}

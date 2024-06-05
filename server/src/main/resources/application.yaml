@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/diploma
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  main:
+    allow-circular-references: true
+
+jwt:
+  secret: 9i3Bk8SJ3CfqIm+v9JJjHc5PGmqNmevaXDLYX4k0sW9hmhuvA6rTNWIM6uISlbVWcn28bMs+gY+P3LLzRytHMQ==
+  access-expire-time: 1800
+  refresh-expire-time: 2592000
+
+
+notification:
+  smtp-host: 127.0.0.1
+  smtp-port: 25
+  sender-email: no_reply@example.com
+
+mail:
+  smtp:
+    host: 127.0.0.1
+    port: 25

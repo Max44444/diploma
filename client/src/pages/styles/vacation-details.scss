@@ -1,0 +1,62 @@
+#vacation-details {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 8rem;
+
+  .remaining-vacations {
+    height: 30%;
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    .remaining-vac {
+      color: #444444;
+      background-color: #fff;
+      width: 33%;
+      height: fit-content;
+      border-radius: 1rem;
+      margin: 1rem;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.8rem;
+      }
+
+      .counter {
+        font-size: 2rem;
+        font-weight: bold;
+        width: 7rem;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 255, 255, 0.5) 0px 0px 15px 0px;
+        border-radius: 50%;
+        margin: 0.5rem 0;
+      }
+
+      p {
+        color: #666;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
